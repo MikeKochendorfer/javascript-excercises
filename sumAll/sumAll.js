@@ -7,8 +7,7 @@ const sumAll = function(int1, int2) {
 	for (let i = argsSorted[0]; i < argsSorted[argsSorted.length-1] + 1; i++) {
 		sum.push(i)
 	}
-	const reducer = (accumulator, currentValue) => accumulator + currentValue;
-	return sum.reduce(reducer)
+	return sum.reduce((total, next) => total + next, 0)
 }
 
 module.exports = sumAll
